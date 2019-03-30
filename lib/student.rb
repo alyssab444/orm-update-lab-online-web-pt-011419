@@ -44,11 +44,12 @@ end
     DB[:conn].execute(sql, self.name, self.grade, self.id)
   end
     
-  def self.create(name:,grade:)
-    student = Student.new(name,grade)
-    student.save 
-    student 
-  end 
+  def self.create(name:, grade:)
+    student = Student.new(name, grade)
+    student.save
+    student
+  end
+
   
   def self.new_from_db(id,name,grade)
     
