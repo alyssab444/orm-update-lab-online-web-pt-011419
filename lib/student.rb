@@ -40,6 +40,7 @@ def self.create_table
     student = Student.new(name,grade)
     student.save 
     sql = "UPDATE students SET name= ? WHERE name = ?"
+    DB[:conn].execute(sql, "Jane Smith".name, "Jane".name)
     student 
   end 
    
