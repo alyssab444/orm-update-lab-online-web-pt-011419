@@ -39,6 +39,7 @@ def self.create_table
   def self.create(name:,grade:)
     student = Student.new(name,grade)
     student.save 
+    sql = "UPDATE students SET name= ? WHERE name = ?"
     student 
   end 
    
