@@ -40,8 +40,6 @@ def self.create_table
     student = student.new(name,grade)
     student.save 
     student 
-    
-    
   end 
    
 end 
