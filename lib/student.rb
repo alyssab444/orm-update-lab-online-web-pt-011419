@@ -60,11 +60,7 @@ end
  
  def self.find_by_name(name)
    sql =  <<-SQL
-      CREATE TABLE IF NOT EXISTS students(
-        id INTEGER PRIMARY KEY,
-        name TEXT,
-        grade INTEGER
-        ) 
+      SELECT * FROM students WHERE name = ? LIMIT 1
         SQL
     DB[:conn].execute(sql) 
    
