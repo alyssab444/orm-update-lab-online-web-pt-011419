@@ -40,6 +40,7 @@ def self.create_table
   end 
 end 
   
+  def 
   def self.create(name:,grade:)
     student = Student.new(name,grade)
     student.save 
